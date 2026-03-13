@@ -35,12 +35,10 @@
             position: relative;
         }
 
-        /* Cabecera con efecto metalizado */
         .header { 
             position: relative; 
             text-align: center; 
             background: #000;
-            overflow: visible;
         }
         
         .cover-photo { 
@@ -67,14 +65,11 @@
             padding: 5px;
         }
 
-        /* Info Empresa */
         .business-info { margin-top: 95px; text-align: center; padding: 0 20px; }
         .business-info h1 { font-size: 28px; margin-bottom: 2px; color: var(--primary-dark); text-transform: uppercase; font-weight: 900; letter-spacing: 1.5px; }
         .business-tagline { color: var(--text-gray); font-size: 14px; margin-bottom: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         .phone-number { color: #2c3e50; font-size: 24px; font-weight: bold; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        .phone-number i { color: #27ae60; }
 
-        /* Botones de Acción Estilo Moderno */
         .action-buttons {
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
@@ -87,10 +82,7 @@
         .btn-item {
             display: flex; flex-direction: column; align-items: center; 
             text-decoration: none; color: var(--primary-dark); font-size: 12px; font-weight: 700;
-            transition: transform 0.2s;
         }
-
-        .btn-item:active { transform: scale(0.9); }
 
         .btn-icon {
             width: 50px; height: 50px; 
@@ -98,10 +90,8 @@
             border-radius: 12px; 
             display: flex; justify-content: center; align-items: center; 
             margin-bottom: 8px; color: var(--accent-yellow); font-size: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* Listado de Servicios */
         .section { padding: 20px; }
         .section h2 { font-size: 16px; color: var(--primary-dark); border-left: 5px solid var(--accent-yellow); padding-left: 12px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
         
@@ -120,21 +110,17 @@
             align-items: center;
             font-weight: 600;
             color: #333;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
         .service-card i { margin-right: 15px; color: var(--primary-dark); font-size: 18px; width: 25px; text-align: center; }
 
-        /* Información de Contacto Final */
         .info-list { list-style: none; padding: 0; margin: 0; background: #fff; }
         .info-item {
             display: flex; padding: 18px 20px; border-top: 1px solid #f0f0f0; 
             align-items: center; text-decoration: none; color: #333;
         }
         .info-item i { width: 40px; height: 40px; color: var(--accent-yellow); font-size: 18px; background: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 15px; }
-        .info-item b { font-size: 14px; color: var(--primary-dark); text-transform: uppercase; }
 
-        /* Footer con logo de Vibras Positivas */
         .footer-credits {
             margin-top: auto;
             padding: 25px;
@@ -163,14 +149,14 @@
 <div class="card-container">
     <div class="header">
         <div class="cover-photo"></div>
-        <img src="inverscg.PNG" alt="Logo INVERS CG" class="profile-logo">
+        <img src="inverscg.jpg" alt="Logo INVERS CG" class="profile-logo">
     </div>
 
     <div class="business-info">
         <h1 contenteditable="true">INVERS CG</h1>
         <div class="business-tagline" contenteditable="true">ELÉCTRICO AUTOMOTRIZ</div>
         <div class="phone-number">
-            <i class="fa-solid fa-square-phone"></i>
+            <i class="fa-solid fa-square-phone" style="color: #27ae60;"></i>
             <span contenteditable="true" id="companyPhone">321 793 8554</span>
         </div>
     </div>
@@ -210,18 +196,18 @@
             </div>
         </div>
         
-        <a href="https://maps.app.goo.gl/TU_LINK_AQUI" target="_blank" class="info-item">
+        <a href="https://www.google.com/maps/search/Invers+CG+Electrico+Automotriz+Caucasia" target="_blank" class="info-item">
             <i class="fa-solid fa-map-location-dot"></i>
             <div>
                 <b>Ubicación</b><br>
-                <small contenteditable="true">Toca aquí para ir al taller (GPS)</small>
+                <small contenteditable="true">Caucasia, Antioquia - Toca para GPS</small>
             </div>
         </a>
     </ul>
 
     <footer class="footer-credits">
         App desarrollada por <b>Vibras Positivas</b><br>
-        © Derechos de autor 3117700431- <b>INVERS CG 2026</b>
+        © 2026 - <b>311 770 0431</b>
     </footer>
 </div>
 
@@ -240,7 +226,7 @@
         saveBtn.innerHTML = isEditing ? '<i class="fa-solid fa-save"></i>' : '<i class="fa-solid fa-pencil"></i>';
         
         if(!isEditing) {
-            alert("¡Información actualizada correctamente!");
+            alert("¡Información actualizada!");
         }
     });
 
@@ -248,11 +234,11 @@
         if (navigator.share) {
             navigator.share({
                 title: 'INVERS CG - Eléctrico Automotriz',
-                text: 'Contacto y servicios de INVERS CG.',
+                text: 'Servicios de electricidad automotriz en Caucasia.',
                 url: window.location.href
             }).catch(console.error);
         } else {
-            alert("Copia este enlace: " + window.location.href);
+            alert("Enlace: " + window.location.href);
         }
     }
 </script>
