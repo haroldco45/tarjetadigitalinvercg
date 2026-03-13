@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta Digital - INVERS CG</title>
+    <title>Tarjeta Digital - INVERS CG ELECTRICO AUTOMOTRIZ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -35,108 +35,111 @@
             position: relative;
         }
 
-        /* Cabecera Automotriz */
+        /* Cabecera con efecto metalizado */
         .header { 
             position: relative; 
             text-align: center; 
             background: #000;
+            overflow: visible;
         }
         
         .cover-photo { 
             width: 100%; 
-            height: 220px; 
+            height: 200px; 
             object-fit: cover; 
-            /* Imagen de taller o motor de alta calidad */
             background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1000&auto=format&fit=crop') center;
-            filter: brightness(0.6) grayscale(0.3);
+            filter: brightness(0.4) contrast(1.2);
         }
 
         .profile-logo { 
-            width: 140px; 
-            height: 140px; 
-            background: #1a2a40; 
-            border-radius: 15px; 
-            border: 3px solid var(--accent-yellow); 
+            width: 160px; 
+            height: 160px; 
+            background: white; 
+            border-radius: 12px; 
+            border: 4px solid var(--accent-yellow); 
             position: absolute; 
-            bottom: -70px; 
+            bottom: -80px; 
             left: 50%; 
             transform: translateX(-50%); 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
             z-index: 2;
             object-fit: contain;
+            padding: 5px;
         }
 
         /* Info Empresa */
-        .business-info { margin-top: 85px; text-align: center; padding: 0 20px; }
-        .business-info h1 { font-size: 26px; margin-bottom: 5px; color: var(--primary-dark); text-transform: uppercase; font-weight: 900; letter-spacing: 1px; }
-        .business-tagline { color: var(--text-gray); font-size: 14px; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; }
-        .phone-number { color: #2c3e50; font-size: 22px; font-weight: bold; margin-bottom: 20px; }
+        .business-info { margin-top: 95px; text-align: center; padding: 0 20px; }
+        .business-info h1 { font-size: 28px; margin-bottom: 2px; color: var(--primary-dark); text-transform: uppercase; font-weight: 900; letter-spacing: 1.5px; }
+        .business-tagline { color: var(--text-gray); font-size: 14px; margin-bottom: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .phone-number { color: #2c3e50; font-size: 24px; font-weight: bold; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .phone-number i { color: #27ae60; }
 
-        /* Botones de Acción */
+        /* Botones de Acción Estilo Moderno */
         .action-buttons {
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
-            gap: 15px; 
+            gap: 12px; 
             padding: 20px; 
-            background: #f4f7f6;
-            border-top: 1px solid #ddd;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
         }
 
         .btn-item {
             display: flex; flex-direction: column; align-items: center; 
-            text-decoration: none; color: var(--primary-dark); font-size: 13px; font-weight: 700;
+            text-decoration: none; color: var(--primary-dark); font-size: 12px; font-weight: 700;
+            transition: transform 0.2s;
         }
+
+        .btn-item:active { transform: scale(0.9); }
 
         .btn-icon {
-            width: 55px; height: 55px; 
-            background: white;
-            border: 2px solid var(--accent-yellow); 
-            border-radius: 50%; 
+            width: 50px; height: 50px; 
+            background: var(--primary-dark);
+            border-radius: 12px; 
             display: flex; justify-content: center; align-items: center; 
-            margin-bottom: 8px; color: var(--primary-dark); font-size: 22px;
-            transition: 0.3s;
+            margin-bottom: 8px; color: var(--accent-yellow); font-size: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .btn-icon:hover { background: var(--accent-yellow); transform: scale(1.1); }
-
-        /* Servicios extraídos de la tarjeta */
-        .section { padding: 25px 20px; }
-        .section h2 { font-size: 18px; color: var(--primary-dark); border-left: 5px solid var(--accent-yellow); padding-left: 10px; margin-bottom: 15px; text-transform: uppercase; }
+        /* Listado de Servicios */
+        .section { padding: 20px; }
+        .section h2 { font-size: 16px; color: var(--primary-dark); border-left: 5px solid var(--accent-yellow); padding-left: 12px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
         
         .services-list {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 8px;
         }
 
         .service-card {
-            background: #fff;
-            padding: 12px;
-            border-radius: 8px;
-            border-left: 3px solid var(--silver);
+            background: #ffffff;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #f0f0f0;
             display: flex;
             align-items: center;
-            font-weight: 500;
-            color: #444;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            font-weight: 600;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
-        .service-card i { margin-right: 15px; color: var(--primary-dark); width: 20px; text-align: center; }
+        .service-card i { margin-right: 15px; color: var(--primary-dark); font-size: 18px; width: 25px; text-align: center; }
 
-        /* Info List */
-        .info-list { list-style: none; padding: 0; margin: 0; }
+        /* Información de Contacto Final */
+        .info-list { list-style: none; padding: 0; margin: 0; background: #fff; }
         .info-item {
-            display: flex; padding: 15px 20px; border-bottom: 1px solid #f0f0f0; 
-            align-items: center; text-decoration: none; color: var(--text-dark);
+            display: flex; padding: 18px 20px; border-top: 1px solid #f0f0f0; 
+            align-items: center; text-decoration: none; color: #333;
         }
-        .info-item i { width: 35px; color: var(--accent-yellow); font-size: 20px; background: var(--primary-dark); height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin-right: 10px; }
+        .info-item i { width: 40px; height: 40px; color: var(--accent-yellow); font-size: 18px; background: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-right: 15px; }
+        .info-item b { font-size: 14px; color: var(--primary-dark); text-transform: uppercase; }
 
-        /* Footer */
+        /* Footer con logo de Vibras Positivas */
         .footer-credits {
             margin-top: auto;
             padding: 25px;
             text-align: center;
-            background-color: #f4f7f6;
+            background-color: #f8f9fa;
             font-size: 12px;
             color: var(--text-gray);
             border-top: 1px solid #eee;
@@ -145,12 +148,12 @@
         #edit-toggle {
             position: fixed; bottom: 20px; right: 20px; 
             background: var(--accent-yellow); color: var(--primary-dark);
-            border: none; border-radius: 50%; width: 60px; height: 60px;
-            font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer;
+            border: none; border-radius: 50%; width: 55px; height: 55px;
+            font-size: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer;
             z-index: 1000;
         }
 
-        .edit-mode [contenteditable="true"] { background: #fffde7; padding: 2px 5px; border-radius: 4px; }
+        .edit-mode [contenteditable="true"] { background: #fffde7; outline: 1px dashed #f1c40f; }
     </style>
 </head>
 <body class="edit-mode">
@@ -160,13 +163,16 @@
 <div class="card-container">
     <div class="header">
         <div class="cover-photo"></div>
-        <img src="logo_invers_cg.png" alt="Logo INVERS CG" class="profile-logo">
+        <img src="inverscg.png" alt="Logo INVERS CG" class="profile-logo">
     </div>
 
     <div class="business-info">
         <h1 contenteditable="true">INVERS CG</h1>
         <div class="business-tagline" contenteditable="true">ELÉCTRICO AUTOMOTRIZ</div>
-        <div class="phone-number" contenteditable="true" id="companyPhone">321 793 8554</div>
+        <div class="phone-number">
+            <i class="fa-solid fa-square-phone"></i>
+            <span contenteditable="true" id="companyPhone">321 793 8554</span>
+        </div>
     </div>
 
     <div class="action-buttons">
@@ -185,37 +191,37 @@
     </div>
 
     <div class="section">
-        <h2>Nuestros Servicios</h2>
+        <h2>Servicios Especializados</h2>
         <div class="services-list">
-            <div class="service-card"><i class="fa-solid fa-plug"></i> Instalaciones eléctricas</div>
-            <div class="service-card"><i class="fa-solid fa-car-battery"></i> Arranques y alternadores</div>
-            <div class="service-card"><i class="fa-solid fa-microchip"></i> Diagnóstico 12V y 24V</div>
-            <div class="service-card"><i class="fa-solid fa-tractor"></i> Sistemas eléctricos maquinaria</div>
-            <div class="service-card"><i class="fa-solid fa-lightbulb"></i> Luces y diagnósticos eléctricos</div>
+            <div class="service-card"><i class="fa-solid fa-bolt"></i> Instalaciones eléctricas</div>
+            <div class="service-card"><i class="fa-solid fa-gears"></i> Arranques y alternadores</div>
+            <div class="service-card"><i class="fa-solid fa-laptop-code"></i> Diagnóstico 12V y 24V</div>
+            <div class="service-card"><i class="fa-solid fa-truck-monster"></i> Sistemas eléctricos maquinaria</div>
+            <div class="service-card"><i class="fa-solid fa-lightbulb"></i> Luces y diagnósticos</div>
         </div>
     </div>
 
     <ul class="info-list">
         <div class="info-item">
-            <i class="fa-solid fa-shield-halved"></i>
+            <i class="fa-solid fa-certificate"></i>
             <div>
-                <b style="color: var(--primary-dark);">CALIDAD GARANTIZADA</b><br>
+                <b>Garantía de Calidad</b><br>
                 <small>Servicio responsable y garantizado</small>
             </div>
         </div>
         
-        <a href="#" target="_blank" class="info-item">
-            <i class="fa-solid fa-location-dot"></i>
+        <a href="https://maps.app.goo.gl/TU_LINK_AQUI" target="_blank" class="info-item">
+            <i class="fa-solid fa-map-location-dot"></i>
             <div>
-                <b>UBICACIÓN</b><br>
-                <small contenteditable="true">Toca aquí para ver dirección exacta</small>
+                <b>Ubicación</b><br>
+                <small contenteditable="true">Toca aquí para ir al taller (GPS)</small>
             </div>
         </a>
     </ul>
 
     <footer class="footer-credits">
         App desarrollada por <b>Vibras Positivas</b><br>
-        © Derechos de autor - <b>INVERS CG</b>
+        © Derechos de autor - <b>INVERS CG 2026</b>
     </footer>
 </div>
 
@@ -234,7 +240,7 @@
         saveBtn.innerHTML = isEditing ? '<i class="fa-solid fa-save"></i>' : '<i class="fa-solid fa-pencil"></i>';
         
         if(!isEditing) {
-            alert("¡Cambios guardados visualmente!");
+            alert("¡Información actualizada correctamente!");
         }
     });
 
@@ -242,11 +248,11 @@
         if (navigator.share) {
             navigator.share({
                 title: 'INVERS CG - Eléctrico Automotriz',
-                text: 'Servicio técnico especializado en electricidad automotriz y maquinaria.',
+                text: 'Contacto y servicios de INVERS CG.',
                 url: window.location.href
             }).catch(console.error);
         } else {
-            alert("Enlace: " + window.location.href);
+            alert("Copia este enlace: " + window.location.href);
         }
     }
 </script>
